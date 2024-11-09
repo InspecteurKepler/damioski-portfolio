@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Geist;
+    src: url('./assets/fonts/Geist/webfonts/Geist-Regular.woff2') format('woff2');
+    font-weight: normal;
+}
+@font-face {
+    font-family: Geist;
+    src: url('./assets/fonts/Geist/webfonts/Geist-Bold.woff2') format('woff2');
+    font-weight: bold;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(19, 19, 19);
+    font-family: Geist;
+    color: lightgray;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
