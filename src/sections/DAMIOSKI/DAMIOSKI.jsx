@@ -78,7 +78,7 @@ const DAMIOSKI = () => {
                         }
                     }}
                 >
-                    <img src="../../src/assets/photoprofil.png" alt="Profile" />
+                    <img src="/photoprofil.png" alt="Profile" />
                 </motion.div>
             </div>
         </motion.div>
