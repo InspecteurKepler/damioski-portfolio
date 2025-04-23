@@ -10,16 +10,18 @@ import MobileWarning from "./components/MobileWarning";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
+  // État pour contrôler l'affichage de l'avertissement
+  const [showWarning, setShowWarning] = useState(true);
 
   useEffect(() => {
     // Détection de l'appareil mobile par la largeur d'écran
     const checkIfMobile = () => {
       const mobileWidth = 768;
-      setIsMobile(window.innerWidth < mobileWidth);
+      const isMobileDevice = window.innerWidth < mobileWidth;
+      setIsMobile(isMobileDevice);
       
-      // Appliquer une classe au body si c'est un mobile et que l'utilisateur n'a pas bypass l'avertissement
-      const bypassWarning = localStorage.getItem('bypassMobileWarning') === 'true';
-      if (window.innerWidth < mobileWidth && !bypassWarning) {
+      // Si c'est un mobile, ajouter la classe au body
+      if (isMobileDevice && showWarning) {
         document.body.classList.add('show-mobile-warning');
       } else {
         document.body.classList.remove('show-mobile-warning');
@@ -33,11 +35,17 @@ const App = () => {
     window.addEventListener('resize', checkIfMobile);
     
     return () => window.removeEventListener('resize', checkIfMobile);
-  }, []);
+  }, [showWarning]);
+
+  // Fonction pour fermer l'avertissement
+  const closeWarning = () => {
+    setShowWarning(false);
+    document.body.classList.remove('show-mobile-warning');
+  };
 
   return (
     <>
-      {isMobile && !localStorage.getItem('bypassMobileWarning') && <MobileWarning />}
+      {isMobile && showWarning && <MobileWarning onClose={closeWarning} />}
       
       <div>
         <section><DAMIOSKI /></section>

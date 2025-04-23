@@ -1,7 +1,7 @@
 import React from 'react';
 import './MobileWarning.scss';
 
-const MobileWarning = () => {
+const MobileWarning = ({ onClose }) => {
   return (
     <div className="mobile-warning">
       <div className="mobile-warning-content">
@@ -28,10 +28,7 @@ const MobileWarning = () => {
         </p>
         <button 
           className="continue-button"
-          onClick={() => {
-            document.body.classList.remove('show-mobile-warning');
-            localStorage.setItem('bypassMobileWarning', 'true');
-          }}
+          onClick={onClose}
         >
           Continuer vers le site quand même
         </button>
