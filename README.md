@@ -79,17 +79,21 @@ damioski-portfolio/
 │   │   ├── Cursus/     # Academic background section
 │   │   ├── Jobs/       # Professional experiences section
 │   │   ├── Skills/     # Skills section
-│   │   ├── Loisirs/    # Hobbies section
+│   │   ├── Loisirs/    # Hobbies section (in development)
 │   │   ├── Contact/    # Contact form section
 │   │   └── styles/     # Shared styles between sections
+│   ├── components/     # Reusable UI components
+│   │   └── MobileWarning/  # Mobile compatibility warning
 │   ├── api/            # API endpoints (form handling)
 │   ├── services/       # Services (email, etc.)
-│   ├── assets/         # Static assets
+│   ├── assets/         # Static assets (fonts, images)
 │   ├── config/         # Configuration files
 │   ├── App.jsx         # Main component
+│   ├── App.scss        # Global styles
 │   └── main.jsx        # Application entry point
 ├── .env                # Environment variables (not versioned)
 ├── vite.config.js      # Vite configuration
+├── eslint.config.js    # ESLint configuration
 └── package.json        # Dependencies and scripts
 ```
 

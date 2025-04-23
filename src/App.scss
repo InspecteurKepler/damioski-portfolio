@@ -9,12 +9,19 @@
     font-weight: bold;
 }
 
-html{
+/* Variables globales */
+:root {
+  --primary-color: #9163CB;
+  --background-color: #0f0f0f;
+  --text-color: #ffffff;
+}
+
+html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -22,7 +29,33 @@ html{
     color: lightgray;
 }
 
-section{
+/* Style pour le body lorsque l'avertissement mobile est affiché */
+body.show-mobile-warning {
+  overflow: hidden; /* Empêche le défilement en arrière-plan */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+section {
     height: 100vh;
     scroll-snap-align: center;
+}
+
+/* Personnalisation de la barre de défilement */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(145, 99, 203, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(145, 99, 203, 0.7);
 }
