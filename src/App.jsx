@@ -13,7 +13,7 @@ const App = () => {
       <section><Cursus /></section>
       <section><Jobs /></section>
       <section><Skills /></section>
-      <section><Loisirs /></section>
+      {/* <section><Loisirs /></section> Plus tard*/}
       <section><Contact /></section>
     </div>;
 };
