@@ -1,10 +1,10 @@
 import "./App.scss";
-import DAMIOSKI from "../sections/DAMIOSKI/DAMIOSKI";
-import Cursus from "../sections/Cursus/Cursus";
-import Jobs from "../sections/Jobs/Jobs";
-import Skills from "../sections/Skills/Skills";
-import Loisirs from "../sections/Loisirs/Loisirs";
-import Contact from "../sections/Contact/Contact";
+import DAMIOSKI from "../src/sections/DAMIOSKI/DAMIOSKI";
+import Cursus from "../src/sections/Cursus/Cursus";
+import Jobs from "../src/sections/Jobs/Jobs";
+import Skills from "../src/sections/Skills/Skills";
+import Loisirs from "../src/sections/Loisirs/Loisirs";
+import Contact from "../src/sections/Contact/Contact";
 
 const App = () => {
 
