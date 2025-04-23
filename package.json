@@ -10,10 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.4",
     "dotenv": "^16.5.0",
-    "emailjs-smtp-client": "^2.0.1",
     "motion": "^12.7.4",
     "nodemailer": "^6.10.1",
     "react": "^18.3.1",
