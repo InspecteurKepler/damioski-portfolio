@@ -1,0 +1,41 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond avec dégradé -->
+  <rect width="1200" height="630" fill="url(#gradient)" />
+  
+  <!-- Formes géométriques décoratives -->
+  <circle cx="200" cy="500" r="300" fill="url(#circleGradient)" opacity="0.3" />
+  <path d="M900 100 L1200 300 L1000 600 Z" fill="#9163CB" opacity="0.2" />
+  <rect x="700" y="50" width="400" height="400" rx="20" fill="#9163CB" opacity="0.1" />
+  
+  <!-- Affichage du texte principal -->
+  <g filter="url(#glow)">
+    <text x="600" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="120" fill="#FFFFFF">DAMIOSKI_</text>
+  </g>
+  
+  <!-- Sous-titre -->
+  <text x="600" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="48" fill="#E0E0E0">PORTFOLIO</text>
+  
+  <!-- Description -->
+  <text x="600" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-weight="400" font-size="28" fill="#CCCCCC">Développeur Web • Designer • Créatif</text>
+  
+  <!-- URL du site -->
+  <text x="600" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-weight="400" font-size="24" fill="#9163CB">portfolio.damioski.de</text>
+  
+  <!-- Définitions des gradients et filtres -->
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1A1A1A" />
+      <stop offset="100%" stop-color="#0A0A0A" />
+    </linearGradient>
+    
+    <radialGradient id="circleGradient" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#9163CB" />
+      <stop offset="100%" stop-color="#61438C" />
+    </radialGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+</svg> 

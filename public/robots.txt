@@ -1,0 +1,10 @@
+# robots.txt pour portfolio.damioski.de
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://portfolio.damioski.de/sitemap.xml
+
+# Exclure éventuellement certains dossiers (à personnaliser selon les besoins)
+# Disallow: /private/
+# Disallow: /admin/ 

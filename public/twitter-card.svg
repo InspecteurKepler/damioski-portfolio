@@ -1,0 +1,54 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond avec dégradé -->
+  <rect width="1200" height="675" fill="url(#gradient)" />
+  
+  <!-- Grille décorative -->
+  <path d="M0 100 H1200" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  <path d="M0 200 H1200" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  <path d="M0 300 H1200" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  <path d="M0 400 H1200" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  <path d="M0 500 H1200" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  <path d="M0 600 H1200" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  
+  <path d="M100 0 V675" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  <path d="M300 0 V675" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  <path d="M500 0 V675" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  <path d="M700 0 V675" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  <path d="M900 0 V675" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  <path d="M1100 0 V675" stroke="#9163CB" stroke-width="1" opacity="0.1" />
+  
+  <!-- Logo stylisé -->
+  <circle cx="250" cy="337.5" r="150" fill="url(#purpleGradient)" opacity="0.8" />
+  
+  <!-- Formes décoratives -->
+  <rect x="900" y="200" width="200" height="200" rx="20" fill="#9163CB" opacity="0.2" />
+  <path d="M800 100 L1000 200 L900 400 Z" fill="#9163CB" opacity="0.15" />
+  
+  <!-- Contenu textuel -->
+  <g filter="url(#shadowFilter)">
+    <text x="600" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="100" fill="#FFFFFF">DAMIOSKI_</text>
+  </g>
+  
+  <!-- Mentions de réseaux sociaux -->
+  <text x="600" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-weight="400" font-size="36" fill="#CCCCCC">@DAMIOSKI</text>
+  
+  <!-- Hashtag -->
+  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="24" fill="#9163CB">#WebDeveloper #Designer #Portfolio</text>
+  
+  <!-- Définitions -->
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#131313" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    
+    <radialGradient id="purpleGradient" cx="0.5" cy="0.5" r="0.5" fx="0.4" fy="0.4">
+      <stop offset="0%" stop-color="#9163CB" />
+      <stop offset="100%" stop-color="#61438C" />
+    </radialGradient>
+    
+    <filter id="shadowFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+</svg> 
