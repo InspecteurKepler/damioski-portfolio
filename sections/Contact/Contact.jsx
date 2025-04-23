@@ -10,6 +10,8 @@ const Contact = () => {
         message: ''
     });
     const [formSubmitted, setFormSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -19,17 +21,42 @@ const Contact = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Ici on ajouterait la logique pour envoyer l'email
-        console.log('Form data:', formData);
-        setFormSubmitted(true);
+        setIsLoading(true);
+        setError(null);
         
-        // Reset le formulaire après 3 secondes
-        setTimeout(() => {
-            setFormSubmitted(false);
-            setFormData({ name: '', email: '', message: '' });
-        }, 3000);
+        try {
+            // Envoi des données au backend
+            const response = await fetch('/api/sendMail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Une erreur est survenue');
+            }
+
+            // Succès
+            console.log('Email envoyé avec succès:', data);
+            setFormSubmitted(true);
+            
+            // Reset le formulaire après 5 secondes
+            setTimeout(() => {
+                setFormSubmitted(false);
+                setFormData({ name: '', email: '', message: '' });
+            }, 5000);
+        } catch (err) {
+            console.error('Erreur lors de l\'envoi de l\'email:', err);
+            setError(err.message || 'Une erreur s\'est produite lors de l\'envoi du message');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     const containerVariants = {
@@ -141,6 +168,7 @@ const Contact = () => {
                                         name="name" 
                                         value={formData.name}
                                         onChange={handleChange}
+                                        disabled={isLoading}
                                         required 
                                     />
                                 </div>
@@ -153,6 +181,7 @@ const Contact = () => {
                                         name="email" 
                                         value={formData.email}
                                         onChange={handleChange}
+                                        disabled={isLoading}
                                         required 
                                     />
                                 </div>
@@ -165,16 +194,24 @@ const Contact = () => {
                                         rows="5"
                                         value={formData.message}
                                         onChange={handleChange}
+                                        disabled={isLoading}
                                         required
                                     ></textarea>
                                 </div>
+                                
+                                {error && (
+                                    <div className="form-error">
+                                        <p>{error}</p>
+                                    </div>
+                                )}
                                 
                                 <motion.button 
                                     type="submit"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
+                                    disabled={isLoading}
                                 >
-                                    Envoyer
+                                    {isLoading ? 'Envoi en cours...' : 'Envoyer'}
                                 </motion.button>
                             </form>
                         )}
