@@ -31,7 +31,6 @@
                 font-weight: bold;
                 margin-bottom: 1rem;
                 position: relative;
-                color: #fef3c7;
                 
                 &::before {
                     content: '';
@@ -59,17 +58,19 @@
                 opacity: 0.8;
                 max-width: 500px;
             }
+
+            span {
+                color: #fef3c7;
+            }
         }
 
         .profile-image {
             img {
-                width: 500px;
-                height: 500px;
+                width: 450px;
+                height: 450px;
                 border-radius: 50%;
                 object-fit: cover;
                 box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-                background-color: #7f00ff;
-                background-blend-mode: color;
             }
         }
     }

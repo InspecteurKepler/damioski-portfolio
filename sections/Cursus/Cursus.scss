@@ -1,1 +1,165 @@
-/* Styles pour la section Cursus */ 
+/* Styles pour la section Cursus */
+.cursus-section {
+  padding: 80px 0;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  h2 {
+    font-size: 3.5rem;
+    margin-bottom: 60px;
+    color: #9163CB;
+    text-align: center;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: 50%;
+      width: 4px;
+      background-color: rgba(145, 99, 203, 0.4);
+      transform: translateX(-50%);
+    }
+  }
+
+  .timeline-item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 80px;
+    position: relative;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .timeline-marker {
+    width: 30px;
+    height: 30px;
+    background-color: #9163CB;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .timeline-content {
+    width: 40%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &.left {
+      text-align: right;
+      margin-right: 30px;
+    }
+
+    &.right {
+      text-align: left;
+      margin-left: 30px;
+    }
+  }
+
+  .timeline-card {
+    background-color: #61438c;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h3 {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+
+    .note, .year {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      margin-top: 5px;
+    }
+  }
+
+  .timeline-school {
+    padding: 10px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    h3 {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 30px;
+    }
+
+    .timeline-marker {
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .timeline-item {
+      flex-direction: column;
+    }
+
+    .timeline-content {
+      width: 80%;
+      margin-left: 60px;
+      margin-right: 0;
+      text-align: left;
+
+      &.left {
+        margin-right: 0;
+        text-align: left;
+        order: 2;
+      }
+
+      &.right {
+        margin-left: 60px;
+        order: 2;
+      }
+    }
+  }
+} 
