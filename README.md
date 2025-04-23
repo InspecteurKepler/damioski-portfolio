@@ -73,16 +73,19 @@ Visit the live site: [portfolio.damioski.de](https://portfolio.damioski.de)
 ```
 damioski-portfolio/
 ├── public/             # Static files (images, favicon, etc.)
-├── sections/           # Main portfolio components
-│   ├── DAMIOSKI/       # Home section
-│   ├── Cursus/         # Academic background section
-│   ├── Jobs/           # Professional experiences section
-│   ├── Skills/         # Skills section
-│   ├── Contact/        # Contact form section
-│   └── styles/         # Shared styles between sections
-├── src/
+├── src/                # Source code
+│   ├── sections/       # Main portfolio components
+│   │   ├── DAMIOSKI/   # Home section
+│   │   ├── Cursus/     # Academic background section
+│   │   ├── Jobs/       # Professional experiences section
+│   │   ├── Skills/     # Skills section
+│   │   ├── Loisirs/    # Hobbies section
+│   │   ├── Contact/    # Contact form section
+│   │   └── styles/     # Shared styles between sections
 │   ├── api/            # API endpoints (form handling)
 │   ├── services/       # Services (email, etc.)
+│   ├── assets/         # Static assets
+│   ├── config/         # Configuration files
 │   ├── App.jsx         # Main component
 │   └── main.jsx        # Application entry point
 ├── .env                # Environment variables (not versioned)
