@@ -71,7 +71,7 @@ const Cursus = () => {
                         <div className="timeline-content right">
                             <div className="timeline-school">
                                 <h3>Lycée Jean Monnet - Pôle Général et Technologique</h3>
-                                <p>1 Pl. Maréchal de Lattre de Tassigny Cedex, 74100 Annemasse</p>
+                                <p>1 Pl. Maréchal de Lattre de Tassigny, 74100 Annemasse</p>
                             </div>
                         </div>
                     </motion.div>
@@ -104,13 +104,17 @@ const Cursus = () => {
                                 whileHover="hover"
                                 variants={cardHoverVariants}
                             >
-                                <h3>LICENCE PRO</h3>
-                                <p>Administration et Sécurité des Systèmes et des Réseaux</p>
-                                <div className="year">Année 2025-2026</div>
+                                <h3>BACHELOR III</h3>
+                                <p>Administrateur Systèmes, Réseaux et Bases de Données</p>
+                                <div className="note">Année 2026-2027</div>
                             </motion.div>
                         </div>
                         <div className="timeline-marker"></div>
                         <div className="timeline-content right">
+                            <div className="timeline-school">
+                                <h3>EPSI Grenoble</h3>
+                                <p>11 Rue du Tour de l'Eau, 38400 Saint-Martin-d'Hères</p>
+                            </div>
                         </div>
                     </motion.div>
                 </div>

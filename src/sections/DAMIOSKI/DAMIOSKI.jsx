@@ -62,7 +62,9 @@ const DAMIOSKI = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 2.5, duration: 0.8 }}
                     >
-                        Développeur JS, C++, PHP | Réseaux d'entreprises, Technicien Informatique
+                        <b>⚠️ RECHERCHE D'UNE ALTERNANCE 2026 - 2027 EN ADMINISTRATEUR SYSTEME ET RÉSEAUX ⚠️</b>
+                        <br /><br />
+                        Développeur JS, C++, PHP | Réseaux d'entreprises, Technicien Informatique, Administrateur Systemes et Réseaux
                     </motion.p>
                 </motion.div>
                 <motion.div 
@@ -78,7 +80,7 @@ const DAMIOSKI = () => {
                         }
                     }}
                 >
-                    <img src="/photoprofil.png" alt="Profile" />
+                    <img src="/p2p.jpg" alt="Profile" />
                 </motion.div>
             </div>
         </motion.div>

@@ -1,11 +1,23 @@
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
 .damioski-section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    height: auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     #gradient-canvas {
         position: absolute;
+        top: 0;
+        left: 0;
         z-index: 1;
         --gradient-color-1: #b937ff; 
         --gradient-color-2: #aa80e3; 
@@ -18,29 +30,35 @@
     .content {
         position: relative;
         z-index: 2;
-        height: 100%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 10%;
+        padding: 60px 10%;
+        gap: 40px;
         color: white;
 
         .text-content {
+            flex: 1;
+            max-width: 550px;
+
             h1 {
-                font-size: 4rem;
+                font-size: var(--fs-h1);
                 font-weight: bold;
-                margin-bottom: 1rem;
+                margin-bottom: 1.5rem;
                 position: relative;
+                padding-left: 20px;
+                line-height: 1.2;
                 
                 &::before {
                     content: '';
                     position: absolute;
-                    left: -20px;
-                    top: 50%;
+                    left: 0;
+                    top: 10%;
                     width: 4px;
-                    height: 100%;
+                    height: 80%;
                     background-color: #fef3c7;
-                    transform: translateY(-50%);
+                    border-radius: 2px;
                 }
 
                 .cursor {
@@ -54,9 +72,9 @@
             }
 
             p {
-                font-size: 1.2rem;
+                font-size: var(--fs-large);
                 opacity: 0.8;
-                max-width: 500px;
+                line-height: 1.6;
             }
 
             span {
@@ -65,12 +83,96 @@
         }
 
         .profile-image {
+            flex-shrink: 0;
+
             img {
-                width: 450px;
-                height: 450px;
+                width: clamp(180px, 28vw, 320px);
+                height: clamp(180px, 28vw, 320px);
+                max-width: 450px;
+                max-height: 450px;
                 border-radius: 50%;
                 object-fit: cover;
                 box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .content {
+            .profile-image {
+                img {
+                    width: 400px;
+                    height: 400px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .content {
+            padding: 60px 8%;
+            gap: 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .content {
+            flex-direction: column-reverse;
+            justify-content: center;
+            padding: 50px 6%;
+            gap: 30px;
+            text-align: center;
+
+            .text-content {
+                max-width: 100%;
+                padding: 0;
+
+                h1 {
+                    padding-left: 0;
+                    padding-bottom: 20px;
+                    display: inline-block;
+                    
+                    &::before {
+                        left: 50%;
+                        top: auto;
+                        bottom: 0;
+                        width: 60%;
+                        height: 4px;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                p {
+                    margin: 0 auto;
+                    max-width: 100%;
+                }
+            }
+
+            .profile-image {
+                img {
+                    width: clamp(160px, 45vw, 260px);
+                    height: clamp(160px, 45vw, 260px);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .content {
+            padding: 40px 5%;
+            gap: 25px;
+
+            .text-content {
+                h1 {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .profile-image {
+                img {
+                    width: clamp(140px, 55vw, 200px);
+                    height: clamp(140px, 55vw, 200px);
+                }
             }
         }
     }
