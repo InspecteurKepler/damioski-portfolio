@@ -1,0 +1,18 @@
+## Dovecot 2.4 - /etc/dovecot/conf.d/auth-passwdfile.conf.ext
+## Traduit depuis la syntaxe 2.3
+
+passdb passwd-file {
+  driver = passwd-file
+  auth_username_format = %{user}
+  passwd_file_path = /etc/dovecot/dovecot-users
+  default_password_scheme = plain
+}
+
+userdb static {
+  driver = static
+  fields {
+    uid = vmail
+    gid = vmail
+    home = /var/mail/vhosts/%{user | domain}/%{user | username}
+  }
+}
